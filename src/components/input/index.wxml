@@ -4,6 +4,7 @@
     </view>
     <view class="r-input-root {{variant==='filled' ? 'r-input-root-filled' : ''}} {{variant==='outlined' ? 'r-input-root-outlined' : ''}} r-input-shrink-label {{disabled ? 'r-input-disabled' : ''}} {{errorMessage ? 'r-input-root-error' : ''}} {{error? 'r-input-root-error-border' :''}} {{(focus || value ) ? 'r-input-root-focus' :''}} ">
         <label wx:if="{{label ? true : false}}"
+                style="{{focus?'color:#1976d2':''}}"
                class="r-label {{(focus || value) ? 'r-label-focus' :''}} {{shrink?'r-label-shrink-focus':''}} {{error ? 'r-label-error' : ''}}">{{label}}</label>
         <input class="input {{focus ? 'r-input-focus' :''}} {{error ? 'r-input-error' : ''}}"
             value="{{value}}"
