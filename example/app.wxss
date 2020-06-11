@@ -1,0 +1,64 @@
+@import "assets/lib/razio-ui/dist/razio-ui.wxss";
+/* material-icons 样式 */
+@import "assets/lib/razio-ui/dist/assets/font-icon/material-icons.wxss";
+
+.razio-container {
+  height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 200rpx 0;
+  box-sizing     : border-box;
+}
+
+.razio-code {
+  display         : block;
+  box-sizing      : border-box;
+  word-break      : break-all;
+  font-size       : 14px;
+  line-height     : 22px;
+  overflow-x      : auto;
+  white-space     : pre;
+  word-wrap       : normal;
+  padding         : 16rpx;
+  margin-top      : 16rpx;
+  font-family     : Consolas, Inconsolata, Courier, monospace, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color           : #abb2bf;
+  background-color: #282c34;
+  max-height      : 180px;
+}
+
+.container {
+  padding: 16rpx;
+}
+
+.test-title {
+  /* padding-left: em; */
+  text-align   : center;
+  line-height  : 1.5;
+  margin-bottom: 10rpx;
+}
+
+.demo .demo-header {
+  margin-top: 32rpx;
+}
+
+.demo:first-child .demo-header {
+  margin-top: 0;
+}
+
+.demo-header {
+  display         : block;
+  text-align      : left;
+  line-height     : 1;
+  margin-bottom   : 16rpx;
+  /* margin-top   : 16rpx; */
+  padding-left    : 6rpx;
+  border-left     : 4rpx solid #0b93d5;
+}
+
+.height-auto {
+  max-height: unset;
+  height    : auto;
+}

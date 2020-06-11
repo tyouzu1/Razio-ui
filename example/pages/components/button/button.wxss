@@ -1,0 +1,4 @@
+.btn {
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+}

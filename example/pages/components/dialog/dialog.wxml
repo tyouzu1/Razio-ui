@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="demo">
+        <text class="demo-header">使用js操作Dialog</text>
+        <view class="demo-content">
+            <r-button bind:tap="handleOpen">打开/关闭</r-button>
+            <r-dialog id="dialog" bind:open="onOpen" bind:close="onClose">
+                <view class="container">
+                    <view>远方除了遥远一无所有</view>
+                    <view>遥远的青稞地</view>
+                    <view>除了青稞一无所有</view>
+                    <view>更远的地方更加孤独</view>
+                </view>
+            </r-dialog>
+        </view>
+        <view class="razio-code height-auto">
+            <text>{{code.normal}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <text class="demo-header">使用props操作dialog</text>
+        <view class="demo-content">
+            <r-button bind:tap="handleToggle">打开</r-button>
+            <r-dialog id="dialog2" show="{{show}}" bind:open="onOpen" bind:close="onClose">
+                <view class="container">
+                    <view>远方除了遥远一无所有</view>
+                    <view>遥远的青稞地</view>
+                    <view>除了青稞一无所有</view>
+                    <view>更远的地方更加孤独</view>
+                    <r-button bind:tap="handleToggle">关闭</r-button>
+                </view>
+            </r-dialog>
+        </view>
+        <view class="razio-code height-auto">
+            <text>{{code.props}}</text>
+        </view>
+    </view>
+</view>

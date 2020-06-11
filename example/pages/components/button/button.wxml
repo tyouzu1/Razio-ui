@@ -1,0 +1,121 @@
+<view class="container">
+    <view class="demo">
+        <view class="demo-header">
+            实心按钮
+        </view>
+        <view class="demo-content">
+            <r-button variant="contained" custom-class="btn" color="default">default</r-button>
+            <r-button variant="contained" custom-class="btn" color="primary">primary</r-button>
+            <r-button variant="contained" custom-class="btn" color="secondary">secondary</r-button>
+            <r-button variant="contained" custom-class="btn" disabled>disabled</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.contained}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+            你也可以使用属性 disableElevation 属性来消除实心按钮的立体效果。
+        </view>
+        <view class="demo-content">
+            <r-button variant="contained" custom-class="btn" disableElevation >default</r-button>
+            <r-button variant="contained" custom-class="btn" disableElevation color="primary">primary</r-button>
+            <r-button variant="contained" custom-class="btn" disableElevation color="secondary">secondary</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.disableElevation}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+            文本按钮
+        </view>
+        <view class="demo-content">
+            <r-button variant="text" custom-class="btn" >default</r-button>
+            <r-button variant="text" custom-class="btn" color="primary">primary</r-button>
+            <r-button variant="text" custom-class="btn" color="secondary">secondary</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.text}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+            描边按钮
+        </view>
+        <view class="demo-content">
+            <r-button variant="outlined" custom-class="btn" >default</r-button>
+            <r-button variant="outlined" custom-class="btn" color="primary">primary</r-button>
+            <r-button variant="outlined" custom-class="btn" color="secondary">secondary</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.outlined}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+            圆角按钮
+        </view>
+        <view class="demo-content">
+            <r-button arc custom-class="btn" variant="contained" >Button</r-button>
+            <r-button arc custom-class="btn" variant="outlined" >Button</r-button>
+            <r-button arc custom-class="btn" variant="text" >Button</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.arc}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+            不同尺寸按钮
+        </view>
+        <view class="demo-content">
+            <r-button size="small" variant="text" custom-class="btn" color="primary">small</r-button>
+            <r-button variant="text" custom-class="btn" color="primary">medium</r-button>
+            <r-button size="large" variant="text" custom-class="btn" color="primary">large</r-button>
+        </view>
+        <view class="demo-content">
+            <r-button size="small" variant="outlined" custom-class="btn" color="primary">small</r-button>
+            <r-button variant="outlined" custom-class="btn" color="primary">medium</r-button>
+            <r-button size="large" variant="outlined" custom-class="btn" color="primary">large</r-button>
+        </view>
+        <view class="demo-content">
+            <r-button size="small" variant="contained" custom-class="btn" color="primary">small</r-button>
+            <r-button variant="contained" custom-class="btn" color="primary">medium</r-button>
+            <r-button size="large" variant="contained" custom-class="btn" color="primary">large</r-button>
+        </view>
+        <view class="razio-code">
+            <text>{{code.size}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">
+           icon 按钮
+        </view>
+        <view class="demo-content">
+            <r-button size="small" icon="face" custom-class="btn" variant="contained" ></r-button>
+            <r-button icon="face" custom-class="btn" variant="contained" ></r-button>
+            <r-button size="large" icon="face" custom-class="btn" variant="contained" ></r-button>
+        </view>
+        <view class="demo-content">
+            <r-button size="small" left-icon="face" custom-class="btn" variant="contained" >face</r-button>
+            <r-button left-icon="face" custom-class="btn" variant="contained" >face</r-button>
+            <r-button size="large" left-icon="face" custom-class="btn" variant="contained" >face</r-button>
+        </view>
+        <view class="demo-content">
+            <r-button size="small" right-icon="face" custom-class="btn" variant="contained" >face</r-button>
+            <r-button right-icon="face" custom-class="btn" variant="contained" >face</r-button>
+            <r-button size="large" right-icon="face" custom-class="btn" variant="contained" >face</r-button>
+        </view>
+        <view class="demo-content">
+            <r-button arc icon="face" custom-class="btn" variant="text" >face</r-button>
+            <r-button arc icon="delete" custom-class="btn" variant="text" >face</r-button>
+            <r-button arc icon="check" custom-class="btn" variant="text" >face</r-button>
+            <r-button arc icon="close" custom-class="btn" variant="text" >face</r-button>
+           
+        </view>
+        <view class="razio-code">
+            <text>{{code.icon}}</text>
+        </view>
+    </view>
+</view>

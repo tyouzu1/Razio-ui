@@ -1,0 +1,25 @@
+.griddd {
+  height: 420rpx;
+  background-color: #efefef;
+  width: 100%;
+
+}
+
+.griddd-item-1,
+.griddd-item-2,
+.griddd-item-3 {
+  background-color: #fff;
+  border-radius: 4rpx;
+  text-align: center;
+  width: 120rpx;
+  box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)
+}
+.griddd-item-1 {
+  line-height: 80rpx;
+}
+.griddd-item-2 {
+  line-height: 120rpx;
+}
+.griddd-item-3 {
+  line-height: 160rpx;
+}

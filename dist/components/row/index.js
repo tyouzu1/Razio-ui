@@ -1,0 +1,1 @@
+"use strict";Component({behaviors:[],properties:{gutter:Number},methods:{},externalClasses:["custom-class"],options:{multipleSlots:!0,addGlobalClass:!0},relations:{"../col/index":{type:"descendant"}}});

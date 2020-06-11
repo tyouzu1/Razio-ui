@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText":"Grid",
+  "usingComponents": {
+    "r-button":"/assets/lib/razio-ui/dist/components/button/index",
+    "r-col":"/assets/lib/razio-ui/dist/components/col/index",
+    "r-row":"/assets/lib/razio-ui/dist/components/row/index",
+    "r-grid":"/assets/lib/razio-ui/dist/components/grid/index",
+    "r-radio":"/assets/lib/razio-ui/dist/components/radio/index",
+    "r-radio-group":"/assets/lib/razio-ui/dist/components/radioGroup/index"
+  }
+}

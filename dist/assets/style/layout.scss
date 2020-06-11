@@ -1,0 +1,14 @@
+// @mixin flex($a,$b,$c,$d){
+//   @if $d { display:flex }
+//   @if $c { flex-direction:$c }
+//   @if $a { align-items:$a }
+//   @if $b { justify-content:$b }
+// }
+// $stars: (
+
+// );
+// @each $index,$item in ($stars) {
+//   .layout-#{$index} {
+//     @include flex(map-get($item,flex),map-get($item, direction),map-get($item, alignItems),map-get($item, justifyContent))
+//   }
+// }

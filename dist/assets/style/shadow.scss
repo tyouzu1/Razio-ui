@@ -1,0 +1,111 @@
+$shadow-key-umbra-opacity: 0.2;
+$shadow-key-penumbra-opacity: 0.14;
+$shadow-ambient-shadow-opacity: 0.12;
+
+@mixin box-shadow($a,$b,$c) {
+  box-shadow: $a rgba(0,0,0,$shadow-key-umbra-opacity), $b rgba(0,0,0,$shadow-key-penumbra-opacity), $c rgba(0,0,0,$shadow-ambient-shadow-opacity);
+}
+
+$stars: (
+  1:(0:0px 2px 1px -1px, 1:0 1px 1px 0px, 2:0 1px 3px 0px),
+  2:(0:0px 3px 1px -2px, 1:0 2px 2px 0px, 2:0 1px 5px 0px),
+  3:(0:0px 3px 3px -2px, 1:0 3px 4px 0px, 2:0 1px 8px 0px),
+  4:(0:0px 2px 4px -1px, 1:0 4px 5px 0px, 2:0 1px 10px 0px),
+  5:(0:0px 3px 5px -1px, 1:0 5px 8px 0px, 2:0 1px 14px 0px),
+  6:(0:0px 3px 5px -1px, 1:0 6px 10px 0px, 2:0 1px 18px 0px),
+  7:(0:0px 4px 5px -2px, 1:0 7px 10px 1px, 2:0 2px 16px 1px),
+  8:(0:0px 5px 5px -3px, 1:0 8px 10px 1px, 2:0 3px 14px 2px),
+  9:(0:0px 5px 6px -3px, 1:0 9px 12px 1px, 2:0 3px 16px 2px),
+  10:(0:0px 6px 6px -3px, 1:0 10px 14px 1px, 2:0 4px 18px 3px),
+  11:(0:0px 6px 7px -4px, 1:0 11px 15px 1px, 2:0 4px 20px 3px),
+  12:(0:0px 7px 8px -4px, 1:0 12px 17px 2px, 2:0 5px 22px 4px),
+  13:(0:0px 7px 8px -4px, 1:0 13px 19px 2px, 2:0 5px 24px 4px),
+  14:(0:0px 7px 9px -4px, 1:0 14px 21px 2px, 2:0 5px 26px 4px),
+  15:(0:0px 8px 9px -5px, 1:0 15px 22px 2px, 2:0 6px 28px 5px),
+  16:(0:0px 8px 10px -5px, 1:0 16px 24px 2px, 2:0 6px 30px 5px),
+  17:(0:0px 8px 11px -5px, 1:0 17px 26px 2px, 2:0 6px 32px 5px),
+  18:(0:0px 9px 11px -5px, 1:0 18px 28px 2px, 2:0 7px 34px 6px),
+  19:(0:0px 9px 12px -6px, 1:0 19px 29px 2px, 2:0 7px 36px 6px),
+  20:(0:0px 10px 13px -6px, 1:0 20px 31px 3px, 2:0 8px 38px 7px),
+  21:(0:0px 10px 13px -6px, 1:0 21px 33px 3px, 2:0 8px 40px 7px),
+  22:(0:0px 10px 14px -6px, 1:0 22px 35px 3px, 2:0 8px 42px 7px),
+  23:(0:0px 11px 14px -7px, 1:0 23px 36px 3px, 2:0 9px 44px 8px),
+  24:(0:0px 11px 15px -7px, 1:0 24px 38px 3px, 2:0 9px 46px 8px),
+);
+// $stars: (
+//   1:(0: 0 2px 1px -1, 1: 0 1px 1px 0,2:0 1px 3px 0),
+//   2:(0: 0 1px 5px 0, 1: 0 2px 2px 0,2: 0 3px 1px -2px),
+//   3:(0: 0 1px 8px 0, 1:0 3px 4px 0, 2: 0 3px 3px -2px),
+//   4:(0: 0 2px 4px -1px, 1: 0 4px 5px 0, 2: 0 1px 10px 0),
+//   5:(0: 0 3px 5px -1px, 1: 0 5px 8px 0, 2: 0 1px 14px 0),
+//   6:(0: 0 3px 5px -1px, 1: 0 6px 10px 0, 2: 0 1px 18px 0),
+//   7:(0: 0 4px 5px -2px, 1: 0 7px 10px 1px, 2: 0 2px 16px 1px),
+//   8:(0: 0 5px 5px -3px, 1: 0 8px 10px 1px, 2: 0 3px 14px 2px),
+//   9:(0: 0 5px 6px -3px, 1: 0 9px 12px 1px, 2: 0 3px 16px 2px),
+//   10:(0: 0 6px 6px -3px, 1: 0 10px 14px 1px, 2: 0 4px 18px 3px),
+//   11:(0: 0 6px 7px -4px, 1: 0 11px 15px 1px, 2: 0 4px 20px 3px),
+//   12:(0: 0 7px 8px -4px, 1: 0 12px 17px 2px, 2: 0 5px 22px 4px),
+//   13:(0: 0 7px 8px -4px, 1: 0 13px 19px 2px, 2: 0 5px 24px 4px),
+//   14:(0: 0 7px 9px -4px, 1: 0 14px 21px 2px, 2: 0 5px 26px 4px),
+//   15:(0: 0 8px 9px -5px, 1: 0 15px 22px 2px, 2: 0 6px 28px 5px),
+//   16:(0: 0 8px 10px -5px, 1: 0 16px 24px 2px, 2: 0 6px 30px 5px),
+//   17:(0: 0 8px 11px -5px, 1: 0 17px 26px 2px, 2: 0 6px 32px 5px),
+//   18:(0: 0 9px 11px -5px, 1: 0 18px 28px 2px, 2: 0 7px 34px 6px),
+//   19:(0: 0 9px 12px -6px, 1: 0 19px 29px 2px, 2: 0 7px 36px 6px),
+//   20:(0: 0 10px 13px -6px, 1: 0 20px 31px 3px, 2: 0 8px 38px 7px),
+//   21:(0: 0 10px 13px -6px, 1: 0 21px 33px 3px, 2: 0 8px 40px 7px),
+//   22:(0: 0 10px 14px -6px, 1: 0 22px 35px 3px, 2: 0 8px 42px 7px),
+//   23:(0: 0 11px 14px -7px, 1: 0 23px 36px 3px, 2: 0 9px 44px 8px),
+//   24:(0: 0 11px 15px -7px, 1: 0 24px 38px 3px, 2: 0 9px 46px 8px),
+// );
+
+@each $index,$item in ($stars) {
+  .shadow-#{$index}{
+    @include box-shadow(map-get($item, 0), map-get($item, 1), map-get($item, 2))
+  }
+}
+.shadow-none {
+  box-shadow: none;
+}
+// const shadowKeyUmbraOpacity = 0.2;
+// const shadowKeyPenumbraOpacity = 0.14;
+// const shadowAmbientShadowOpacity = 0.12;
+
+// function createShadow(...px) {
+//   return [
+//     `${px[0]}px ${px[1]}px ${px[2]}px ${px[3]}px rgba(0,0,0,${shadowKeyUmbraOpacity})`,
+//     `${px[4]}px ${px[5]}px ${px[6]}px ${px[7]}px rgba(0,0,0,${shadowKeyPenumbraOpacity})`,
+//     `${px[8]}px ${px[9]}px ${px[10]}px ${px[11]}px rgba(0,0,0,${shadowAmbientShadowOpacity})`,
+//   ].join(',');
+// }
+
+// // Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
+// const shadows = [
+//   'none',
+//   createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0),
+//   createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0),
+//   createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0),
+//   createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0),
+//   createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0),
+//   createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0),
+//   createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1),
+//   createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2),
+//   createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2),
+//   createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3),
+//   createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3),
+//   createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4),
+//   createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4),
+//   createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4),
+//   createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5),
+//   createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5),
+//   createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5),
+//   createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6),
+//   createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6),
+//   createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7),
+//   createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7),
+//   createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7),
+//   createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
+//   createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8),
+// ];
+
+// export default shadows;

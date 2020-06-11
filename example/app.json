@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/components/grid/grid",
+    "pages/components/radio/radio",
+    "pages/components/button/button",
+    "pages/components/dialog/dialog",
+    "pages/components/input/input",
+    "pages/logs/logs",
+    "pages/components/icon/icon",
+    "pages/components/row_col/row_col",
+    "pages/components/cell/cell"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Razio-ui",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

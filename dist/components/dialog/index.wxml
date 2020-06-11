@@ -1,0 +1,1 @@
+<view class="r-dialog"><view wx:if="{{overlay && show }}" class="r-dialog-mask {{(!closing)?'r-fadeIn':''}} {{closing?'r-fadeOut':''}}" capture-bind:tap="{{overlayClose ? '$close' : ''}}"></view><view wx:if="{{show}}" class="custom-class r-dialog-content {{(!closing)?transitionIn:''}} {{(closing)?transitionOut:''}}" bind:animationend="$animationend"><slot></slot></view></view>

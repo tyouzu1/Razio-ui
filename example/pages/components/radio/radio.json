@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText":"Radio",
+  "usingComponents": {
+    "r-radio":"/assets/lib/razio-ui/dist/components/radio/index",
+    "r-radio-group":"/assets/lib/razio-ui/dist/components/radioGroup/index"
+  }
+}

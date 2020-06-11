@@ -1,0 +1,16 @@
+.icon-container{
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.material-icons {
+  max-width: 24px;
+  font-size: 14px;
+}
+.icon-item{
+  border: 1px solid #efefef;
+  text-align: center;
+  width: 50%;
+  box-sizing: border-box;
+}

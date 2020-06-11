@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Row Col",
+  "usingComponents": {
+    "r-row": "/assets/lib/razio-ui/dist/components/row/index",
+    "r-col": "/assets/lib/razio-ui/dist/components/col/index"
+  }
+}

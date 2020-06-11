@@ -1,0 +1,1 @@
+<view class="coustom-class {{row === 'column' ? 'r-radio-group-column' : 'r-radio-group-row'}}" catch:radiochange="$radioChange"><slot></slot></view>

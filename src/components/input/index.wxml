@@ -1,0 +1,35 @@
+<view class="custom-class r-input">
+    <view wx-if="{{icon}}" class="r-icon-container">
+        <i class="~material-icons {{error?'r-error-icon':'r-icon'}} icon-class">{{icon}}</i>
+    </view>
+    <view class="r-input-root {{variant==='filled' ? 'r-input-root-filled' : ''}} {{variant==='outlined' ? 'r-input-root-outlined' : ''}} r-input-shrink-label {{disabled ? 'r-input-disabled' : ''}} {{errorMessage ? 'r-input-root-error' : ''}} {{error? 'r-input-root-error-border' :''}} {{(focus || value ) ? 'r-input-root-focus' :''}} ">
+        <label wx:if="{{label ? true : false}}"
+               class="r-label {{(focus || value) ? 'r-label-focus' :''}} {{shrink?'r-label-shrink-focus':''}} {{error ? 'r-label-error' : ''}}">{{label}}</label>
+        <input class="input {{focus ? 'r-input-focus' :''}} {{error ? 'r-input-error' : ''}}"
+            value="{{value}}"
+            type="{{type}}"
+            password="{{password}}"
+            placeholder="{{label ? (focus ? placeholder : '') : placeholder}}"
+            placeholder-style="{{placeholderStyle}}"
+            placeholder-class="{{placeholderClass}}"
+            disabled="{{disabled}}"
+            maxlength="{{maxlength}}"
+            cursor-spacing="{{cursorSpacing}}"
+            auto-focus="{{autoFocus}}"
+            focus="{{focus}}"
+            confirm-type="{{confirmType}}"
+            confirm-hold="{{confirmHold}}"
+            cursor="{{cursor}}"
+            selection-start="{{selectionStart}}"
+            selection-end="{{selectionEnd}}"
+            adjust-position="{{adjustPosition}}"
+            hold-keyboard="{{holdKeyboard}}"
+            bindinput="$input"
+            bindfocus="$focus"
+            bindblur="$blur"
+            bindconfirm="$confirm"
+            bindkeyboardheightchange="$keyboardheightchange"
+        />
+         <view wx:if="{{errorMessage}}" class="r-error" style="opacity: {{error? '1' :'0'}}">{{errorMessage}}</view>
+    </view>
+</view>

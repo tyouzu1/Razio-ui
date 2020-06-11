@@ -1,0 +1,236 @@
+@import "../../assets/style/shadow.scss";
+$button-size-small: 80rpx;
+$button-size-default: 96rpx;
+$button-size-large: 112rpx;
+
+.r{
+  &-button {
+    position: relative;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    // text-transform: uppercase;
+    white-space: nowrap;
+    touch-action: manipulation;
+    user-select: none;
+    transition: all .2s cubic-bezier(.4,0,.2,1);
+    will-change: box-shadow;
+    box-sizing: border-box;
+    zoom: 1;
+    outline: 0;
+    border-radius: 8rpx;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    //overflow:hidden; + border-raduis ； 子元素 transform 时，ios 有穿透溢出的 bug
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    //左右黑色 border 修复
+    &::after {
+      border: none;
+    }
+    &-primary {
+      color: #fff;
+      background-color: #1976d2;
+    }
+    &-default {
+      color: rgba(0, 0, 0, 0.87);
+      background-color: #e0e0e0;
+    }
+    &-secondary {
+      color: #fff;
+      background-color: rgb(220, 0, 78);
+    }
+    &-contained {
+      &-default-hover {
+        background-color: #d5d5d5;
+      }
+      &-secondary-hover {
+        background-color: rgb(154, 0, 54);
+      }
+      &-primary-hover {
+        background-color: rgb(17, 82, 147);
+      }
+    }
+    &-outlined {
+      border: 2rpx solid rgba(0, 0, 0, 0.23);
+      background: none;
+      &-default {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      &-secondary {
+        border-color: rgba(220, 0, 78, 0.5);
+        color: rgb(220, 0, 78);
+      }
+      &-primary {
+        color: #1976d2;
+        border-color: #1976d2;
+      }
+      &-default-hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      &-secondary-hover {
+        background-color: rgba(220, 0, 78, 0.04);
+      }
+      &-primary-hover {
+        background-color: rgba(25, 118, 210, 0.04);
+      }
+    }
+    &-text {
+      background-color: transparent;
+      &-default {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      &-secondary {
+        color: rgb(220, 0, 78);
+      }
+      &-primary {
+        color: #1976d2;
+      }
+      &-default-hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      &-secondary-hover {
+        background-color: rgba(220, 0, 78, 0.04);
+      }
+      &-primary-hover {
+        background-color: rgba(25, 118, 210, 0.04);
+      }
+    }
+
+
+    &-with-icon {
+      max-width:  $button-size-default;
+      width:  $button-size-default;
+      height:  $button-size-default;
+      border-radius: 50%;
+      overflow: hidden;
+      max-height:  $button-size-default;
+    }
+    &-arc {
+      min-width: $button-size-default;
+      width: auto;
+      min-height: $button-size-default;
+      // padding: 0;
+      overflow: hidden;
+      // border-radius: 50%;
+      border-radius: 100px;
+      // border-style: none;
+      background-color: transparent;
+    }
+
+    &-small {
+      min-width:  $button-size-small;
+      min-height:  $button-size-small;
+      height:  $button-size-small;
+    }
+
+    &-large {
+      min-width:  $button-size-large;
+      min-height:  $button-size-large;
+      height:  $button-size-large;
+    }
+    
+    &[disabled]{
+      color: rgba(0, 0, 0, 0.26);
+      box-shadow: none;
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+ 
+    &-left-icon{
+      margin-right: 10rpx;
+    }
+    &-right-icon{
+      margin-left: 10rpx;
+    }
+    &-icon-bug-fix{
+      vertical-align: super; //bug fix
+    }
+  }
+
+  &-ripple {
+    position: absolute;
+    left: 40rpx;
+    top: 40rpx;
+    width: 20rpx;
+    height: 20rpx;
+    transform: scale(0.3);
+    background-color: rgb(255,255,255);
+    border-radius: 100%;
+    &-animation-normal {
+
+      animation: r-ripple-animation-normal 0.6s ease-out;
+      animation-fill-mode: forwards;
+
+      &-hold {
+        animation: r-ripple-animation-normal-hold 1s ease-out;
+        animation-fill-mode: forwards;
+      }
+      &-end {
+        animation: r-ripple-animation-normal-end 0.3s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  @keyframes r-ripple-animation-normal {
+    0% {
+      transform: scale(0.1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes r-ripple-animation-normal-hold {
+    0% {
+      transform: scale(0.1);
+      opacity: 0.3;
+
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0.3;
+    }
+  }
+  @keyframes r-ripple-animation-normal-end {
+    0% {
+      transform: scale(2.5);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+}
+
+.r-button-small.r-button-with-icon {
+  max-width:  $button-size-small;
+  width:  $button-size-small;
+  height:  $button-size-small;
+  max-height:  $button-size-small;
+}
+.r-button-large.r-button-with-icon {
+  max-width:  $button-size-large;
+  width:  $button-size-large;
+  height:  $button-size-large;
+  max-height:  $button-size-large;
+}
+.r-button-small {
+  .r-button-icon,
+  .r-button-left-icon,
+  .r-button-right-icon{
+    font-size: 20px;
+  }
+}
+.r-button-large {
+  .r-button-icon,
+  .r-button-left-icon,
+  .r-button-right-icon{
+    font-size: 28px;
+  }
+}

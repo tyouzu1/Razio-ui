@@ -1,0 +1,78 @@
+<view class="container">
+    <view class="demo">
+        <view class="demo-header">带label的三种 input('filled'|'outlined'|'standard')</view>
+        <view class="demo-content">
+            <r-input custom-class="input-margin" label="standard"></r-input>
+            <r-input custom-class="input-margin" variant="filled" label="filled"></r-input>
+            <r-input custom-class="input-margin" variant="outlined" label="outlined"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.label}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">默认shrink的三种input</view>
+        <view class="demo-content">
+            <r-input shrink="{{true}}" custom-class="input-margin" label="standard"></r-input>
+            <r-input shrink="{{true}}" custom-class="input-margin" variant="filled" label="filled"></r-input>
+            <r-input shrink="{{true}}" custom-class="input-margin" variant="outlined" label="outlined"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.shrink}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">没有label的input</view>
+        <view class="demo-content">
+            <r-input placeholder="没有浮动标签"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.placeholder}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">placeholder和label组合的input</view>
+        <view class="demo-content">
+            <r-input label="label" placeholder="placeholder"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.labelWithPlaceholder}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">附加图标的input</view>
+        <view class="demo-content">
+            <r-input label="icon" icon="face"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.icon}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">自定义正则的的input</view>
+        <view class="demo-content">
+            <r-input label="邮箱" error-message="邮箱号格式错误" regexp="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.regexp}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">已有正则的input</view>
+        <view class="demo-content">
+            <r-input label="手机号" rule="phone"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.rule}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">禁用input</view>
+        <view class="demo-content">
+            <r-input label="禁用" disabled="{{true}}"></r-input>
+        </view>
+        <view class="razio-code">
+            <text>{{code.disabled}}</text>
+        </view>
+    </view>
+</view>

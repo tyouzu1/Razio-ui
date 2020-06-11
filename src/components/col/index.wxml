@@ -1,0 +1,6 @@
+<view class="custom-class r-col {{span? ('r-col-' + span) :''}} {{offset? ('r-col-offset-' + offset) :''}} "
+  style="{{gutter ? ('padding-left:' + (gutter / 2) + 'px; padding-right:' + (gutter / 2 ) + 'px' ):''}}"
+  
+>
+ <slot></slot>
+</view>

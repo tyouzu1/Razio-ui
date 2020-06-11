@@ -1,0 +1,1 @@
+"use strict";Component({properties:{},data:{value:[]},relations:{"../cell/index":{type:"child"}},externalClasses:["custom-class"],ready:function(){this.items=this.$getAllCheckboxs()},methods:{$getAllCheckboxs:function(){return this.getRelationNodes("../cell/index")}}});

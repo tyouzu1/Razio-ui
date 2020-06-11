@@ -1,0 +1,122 @@
+@import "../../assets/style/shadow.scss";
+
+.r{
+  &-cell {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex:0 0 100%;
+    min-height: 96rpx;
+    font-size: 32rpx;
+    overflow: hidden;
+    border-bottom: 1px solid lightgrey;
+    padding: 24rpx 32rpx;
+    box-sizing: border-box;
+    //左右黑色 border 修复
+    &::after {
+      border: none;
+    }
+    &-left{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center;
+        flex: 1 0 25%;
+        &-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: start;
+            padding: 0 16rpx;
+        }
+    }
+    .r-cell-left-container .r-cell-header{
+        white-space: nowrap;
+        font-size: 28rpx;
+    }
+    
+    .r-cell-left-container .r-cell-sub-header{
+        font-size: 24rpx;
+    }
+    
+    .r-cell-left .iconfont{
+        font-size: 48rpx;
+    }
+    &-right{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .r-cell-right .right-text{
+        display: inline-block;
+        // color: rgba(0,0,0,.54);
+        font-size: 28rpx;
+    }
+  }
+
+  &-ripple {
+    position: absolute;
+    left: 40rpx;
+    top: 40rpx;
+    width: 20rpx;
+    height: 20rpx;
+    transform: scale(0.3);
+    background-color: rgb(255,255,255);
+    border-radius: 100%;
+    &-animation-normal {
+
+      animation: r-ripple-animation-normal 0.6s ease-out;
+      animation-fill-mode: forwards;
+
+      &-hold {
+        animation: r-ripple-animation-normal-hold 1s ease-out;
+        animation-fill-mode: forwards;
+      }
+      &-end {
+        animation: r-ripple-animation-normal-end 0.3s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  @keyframes r-ripple-animation-normal {
+    0% {
+      transform: scale(0.1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes r-ripple-animation-normal-hold {
+    0% {
+      transform: scale(0.1);
+      opacity: 0.3;
+
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0.3;
+    }
+  }
+  @keyframes r-ripple-animation-normal-end {
+    0% {
+      transform: scale(2.5);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+}

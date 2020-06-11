@@ -1,0 +1,31 @@
+<!-- index.wxml -->
+<view>
+    <r-cell-group bind:tap="handleGo">
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/grid/grid">
+            grid
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/radio/radio">
+            radio
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/button/button">
+            button
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/icon/icon">
+            icon
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/dialog/dialog">
+            dialog
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/input/input">
+            input
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/cell/cell">
+            cell
+        </r-cell>
+        <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/row_col/row_col">
+            row and col
+        </r-cell>
+    </r-cell-group>
+    <view class="help">注：目前 Razio-ui 仅为组件样例，不建议生产中使用</view>
+    <view class="help">by: Razio(https://github.com/tyouzu1/Razio-ui)</view>
+</view>

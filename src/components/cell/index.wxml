@@ -1,0 +1,19 @@
+<view class="custom-class ripple r-cell" capture-bind:tap="{{ripple ? '$tap' : ''}}" capture-bind:longpress="{{ripple ? '$longPress' : ''}}" capture-bind:touchend="{{ripple ? '$touchEnd' : ''}}">
+    <view class="r-cell-left">
+        <i class="~material-icons left-icon">{{leftIcon}}</i>
+        <view class="r-cell-left-container">
+            <view class="r-cell-header">
+                <slot></slot>
+            </view>
+        </view>
+    </view>
+    <view class="r-cell-right">
+        <view class="right-text">
+            <slot name="right"></slot>
+        </view>
+        <i class="~material-icons right-icon">{{rightIcon}}</i>
+    </view>
+    <!-- ripple start -->
+    <view wx:for="{{rippleData.list}}" wx:key="index" style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px;background-color: {{item.backgroundColor}}" class="r-ripple-class r-ripple {{item.start ? ( item.hold ? 'r-ripple-animation-normal-hold' :'r-ripple-animation-normal' ) : ( item.hold ? 'r-ripple-animation-normal-end' :'' ) }}" bind:animationend="{{item.hold ? null : '$animationEnd'}}"></view>
+    <!-- ripple end -->
+</view>

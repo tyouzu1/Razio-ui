@@ -1,0 +1,11 @@
+
+.r-col {
+  float: left;
+  box-sizing: border-box;
+}
+$number: 24;
+
+@for $i from 1 through $number {
+  .r-col-#{$i} { width: $i * 100% / 24; }
+  .r-col-offset-#{$i} { margin-left: $i * 100% / 24; }
+}

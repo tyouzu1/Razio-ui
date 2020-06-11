@@ -1,0 +1,50 @@
+<button class="custom-class ripple r-button r-button-{{color}} {{arc ? 'r-button-arc' : ' '}} {{size === 'small'? 'r-button-small' : (size === 'large'? 'r-button-large' : '')}} {{icon?'r-button-with-icon':''}} {{computedClass}} {{rightIcon?'r-button-icon-bug-fix':''}}"
+  
+  hover-class="{{hoverClass ? hoverClass : computedHoverClass }}"
+  hover-start-time="{{hoverStartTime}}" 
+  hover-stay-time="{{hoverStayTime}}"
+  hover-stop-propagation="{{hoverStopPropagation}}"
+
+  form-type="{{formType}}"
+  open-type="{{openType}}"
+
+  plain="{{plain}}"
+  disabled="{{disabled}}"
+  loading="{{loading}}"
+
+  app-parameter="{{appParameter}}"
+  
+  bind:getuserinfo="$triggerEvent"
+  bind:contact="$triggerEvent"
+  bind:getphonenumber="$triggerEvent"
+  bind:error="$triggerEvent"
+  bind:opensetting="$triggerEvent"
+  bind:launchapp="$triggerEvent"
+
+  lang="{{lang}}"
+
+  session-from="{{sessionFrom}}"
+  send-message-title="{{sendMessageTitle}}"
+  send-message-path="{{sendMessagePath}}"
+  send-message-img="{{sendMessageImg}}"
+  show-message-card="{{showMessageCard}}"
+
+  aria-label="{{ariaLabel}}"
+
+  capture-bind:tap="$tap"
+  capture-bind:longpress="$longPress"
+  capture-bind:touchend="$touchEnd"
+>
+ <i wx:if="{{leftIcon&&!icon}}" class="~material-icons r-button-left-icon left-icon">{{leftIcon}}</i>
+ <slot wx:if="{{!icon}}" ></slot>
+ <i wx:if="{{icon}}" class="~material-icons r-button-icon">{{icon}}</i>
+ <i wx:if="{{rightIcon&&!icon}}" class="~material-icons r-button-right-icon right-icon">{{rightIcon}}</i>
+ <!-- ripple start -->
+ <view
+  wx:for="{{rippleData.list}}"
+  wx:key="index"
+  style="width:{{item.width}}px;height:{{item.height}}px;left:{{item.left}}px;top:{{item.top}}px;background-color: {{item.backgroundColor}}"
+  class="r-ripple-class r-ripple {{item.start ? ( item.hold ? 'r-ripple-animation-normal-hold' :'r-ripple-animation-normal' ) : ( item.hold ? 'r-ripple-animation-normal-end' :'' ) }}"
+  bind:animationend="{{item.hold ? null : '$animationEnd'}}"></view>
+  <!-- ripple end -->
+</button>

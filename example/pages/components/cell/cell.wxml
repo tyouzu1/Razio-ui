@@ -1,0 +1,52 @@
+<view class="container">
+    <view class="demo">
+        <view class="demo-header">使用 cell</view>
+        <view class="demo-content">
+            <r-cell data-url="/pages/components/grid/grid">cell</r-cell>
+        </view>
+        <view class="razio-code">
+            <text>{{code.cell}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">带icon的 cell</view>
+        <view class="demo-content">
+            <r-cell right-icon="keyboard_arrow_right">右边有icon</r-cell>
+            <r-cell left-icon="keyboard_arrow_right">左边有icon</r-cell>
+        </view>
+        <view class="razio-code">
+            <text>{{code.icon}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">使用slot的 cell</view>
+        <view class="demo-content">
+            <r-cell right-icon="keyboard_arrow_right">
+                <view>left</view>
+                <view slot="right">right</view>
+            </r-cell>
+        </view>
+        <view class="razio-code">
+            <text>{{code.slot}}</text>
+        </view>
+    </view>
+    <view class="demo">
+        <view class="demo-header">使用 cell-group</view>
+        <view class="demo-content">
+            <r-cell-group bind:tap="handleGo">
+                <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/grid/grid">
+                    grid
+                </r-cell>
+                <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/radio/radio">
+                    radio
+                </r-cell>
+                <r-cell right-icon="keyboard_arrow_right" data-url="/pages/components/button/button">
+                    button
+                </r-cell>
+            </r-cell-group>
+        </view>
+        <view class="razio-code">
+            <text>{{code.group}}</text>
+        </view>
+    </view>
+</view>

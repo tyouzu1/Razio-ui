@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="demo">
+    <view class="demo-header">使用 icon</view>
+    <view class="razio-code">
+      <text>{{code.icon}}</text>
+    </view>
+  </view>
+  <view class="demo">
+    <view class="demo-header">以下展示为所有的 icon，来自 https://material-ui.com/zh/components/material-icons/</view>
+    <view class="icon-container">
+      <view class="icon-item" wx:for="{{iconList}}" wx:key="item" bind:tap="handleShowItem" data-item="{{item}}">
+        <view>
+          <i class="material-icons">{{item}}</i>
+        </view>
+        <view>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

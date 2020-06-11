@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "input",
+  "usingComponents":{
+    "r-input":"/assets/lib/razio-ui/dist/components/input/index"
+  }
+}

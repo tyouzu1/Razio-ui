@@ -1,0 +1,204 @@
+.r-input {
+    position   : relative;
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: flex-end;
+
+}
+
+.r-input-root {
+    position: relative;
+    flex    : 1;
+
+}
+
+.r-input-root::before {
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    bottom        : 0;
+    content       : "\00a0";
+    position      : absolute;
+    transition    : border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom : 1px solid rgba(0, 0, 0, 0.42);
+    pointer-events: none;
+}
+
+.r-input input {
+    position          : relative;
+    display           : block;
+    height            : 64rpx;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    -webkit-appearance: none;
+    overflow          : hidden;
+    font-size         : 32rpx;
+    line-height       : 64rpx;
+    resize            : none;
+    text-align        : left;
+    width             : 100%;
+    min-height        : unset;
+}
+
+.r-input-label input {
+    margin-top: 32rpx;
+}
+
+.r-input input::before {
+
+    /* height          : 2px;
+    background-color: currentColor; */
+    border-bottom : 2px solid transparent;
+    left          : 0;
+    right         : 0;
+    bottom        : 0;
+    content       : "";
+    position      : absolute;
+    transform     : scaleX(0);
+    transition    : transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    pointer-events: none;
+}
+
+.r-label {
+    position        : absolute;
+    display         : inline-block;
+    width           : 100%;
+    font-size       : 32rpx;
+    pointer-events  : none;
+    transform-origin: left;
+    transition      : all .2s;
+    text-align      : left;
+    color           : rgba(0, 0, 0, .54);
+    top             : 32rpx;
+    transform       : translateY(50%) scale(1);
+    line-height     : 1;
+}
+
+
+
+.r-input-disabled .r-label {
+    color: rgba(0, 0, 0, .38);
+}
+
+.r-input-shrink-label input {
+    margin-top: 32rpx;
+}
+
+.r-input .r-input-error::before {
+    background-color: red;
+}
+
+.r-input-root-error {
+    margin-bottom: 32rpx;
+}
+
+.r-input-root-error-border.r-input-root::before {
+    border-color: red;
+}
+
+.r-input-root-error-border.r-input-root-focus .r-input-focus::before {
+    border-color: red;
+}
+.r-input-shrink-label .r-label-shrink-focus,
+.r-input-shrink-label .r-label-focus {
+    transform: scale(.8) translateY(0);
+    top      : 0;
+}
+.r-input-shrink-label .r-label-focus {
+    color    : #1976d2;
+}
+
+.r-label.r-label-error {
+    color: red;
+}
+
+.r-input .r-input-focus {
+    border-bottom: none;
+}
+
+
+.r-input-root-outlined .r-input-focus::before {
+    top          : 0;
+    border       : 2px solid transparent;
+    transition   : none;
+    border-radius: 8rpx;
+}
+
+.r-input-root-outlined .r-input-focus::before,
+.r-input-shrink-label .r-input-focus::before {
+    transform   : scaleX(1);
+    border-color: #1976d2;
+}
+
+.r-error {
+    display   : block;
+    text-align: left;
+    color     : red;
+    transition: opacity .3s ease-in;
+    opacity   : 0;
+    position  : absolute;
+    font-size : .5em;
+}
+
+.r-error-icon {}
+
+.r-icon {
+    font-size  : 1.2em;
+    line-height: 1;
+
+}
+
+.r-icon-container {
+    padding    : 8rpx;
+    box-sizing : border-box;
+    height     : 64rpx;
+    line-height: 64rpx;
+}
+
+.r-input-root-filled {
+    border-top-left-radius : 8rpx;
+    border-top-right-radius: 8rpx;
+    background-color       : rgba(0, 0, 0, 0.09);
+}
+
+.r-input-root-filled .r-label {
+    padding: 20rpx 30rpx 10rpx;
+    top    : 0;
+}
+
+.r-input-root-filled .input {
+    padding: 0 30rpx;
+    height : 84rpx;
+
+}
+
+.r-input-root-outlined {
+    border-radius: 8rpx;
+}
+
+.r-input-root-outlined .r-label {
+    left: 28rpx;
+    top : 24rpx;
+}
+.r-input-root-outlined .r-label-shrink-focus,
+.r-input-root-outlined .r-label.r-label-focus {
+    background-color: #fff;
+    width           : auto;
+    left            : 20rpx;
+    padding-left    : 10rpx;
+    z-index         : 999;
+    top             : -16rpx;
+}
+
+.r-input-root-outlined.r-input-shrink-label .input {
+    margin-top: 0;
+    padding   : 26rpx 20rpx;
+    height    : 116rpx;
+
+
+}
+
+.r-input-root-outlined.r-input-root::before {
+    border-radius: 8rpx;
+    border       : 1px solid rgba(0, 0, 0, 0.42);
+}

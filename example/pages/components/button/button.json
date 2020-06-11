@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"Button",
+  "usingComponents": {
+    "r-button":"/assets/lib/razio-ui/dist/components/button/index"
+  }
+}

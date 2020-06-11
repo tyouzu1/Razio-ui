@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="demo-header">以下为 grid 组件展示用例</view>
+  <r-grid custom-class="griddd" container="{{container}}" direction="{{direction}}" justify="{{justify}}" alignItems="{{alignItems}}">
+    <view class="griddd-item-1">item 1</view>
+    <view class="griddd-item-2">item 2</view>
+    <view class="griddd-item-3">item 3</view>
+  </r-grid>
+  direction
+  <r-radio-group bind:change="radioChange1">
+    <r-radio wx:for-items="{{directionList}}" wx:key="value" value="{{item.value}}" checked="{{item.checked}}">
+      <text>{{item.name}}</text>
+    </r-radio>
+  </r-radio-group>
+  justify
+  <r-radio-group bind:change="radioChange2">
+    <r-radio wx:for-items="{{justifyList}}" wx:key="value" value="{{item.value}}" checked="{{item.checked}}">
+      <text>{{item.name}}</text>
+    </r-radio>
+  </r-radio-group>
+  alignItems
+  <r-radio-group bind:change="radioChange3">
+    <r-radio wx:for-items="{{alignItemsList}}" wx:key="value" value="{{item.value}}" checked="{{item.checked}}">
+      <text>{{item.name}}</text>
+    </r-radio>
+  </r-radio-group>
+  <view class="razio-code">
+    <text>{{code.normal}}</text>
+  </view>
+</view>

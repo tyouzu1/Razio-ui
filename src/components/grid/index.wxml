@@ -1,0 +1,5 @@
+<view class="custom-class"
+  style="{{container?'display:flex;':''}}{{alignContent ? ('align-content:'+alignContent+';') : ''}}{{alignItems ? ('align-items: '+ alignItems +';'):''}}{{direction ? ('flex-direction:'+direction+';'):''}}{{justify ? ('justify-content:'+ justify + ';' ):''}}{{wrap?('flex-wrap:'+wrap+';'):''}}{{container&&spacing?'':''}}"
+>
+  <slot></slot>
+</view>

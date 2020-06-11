@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="demo">
+    <view class="demo-header">使用 label</view>
+    <view class="demo-content">
+      <r-radio label="label" checked value="label"></r-radio>
+    </view>
+    <view class="razio-code">
+      <text>{{code.label}}</text>
+    </view>
+  </view>
+  <view class="demo">
+    <view class="demo-header">使用 slot</view>
+    <view class="demo-content">
+      <r-radio value="slot">slot</r-radio>
+    </view>
+    <view class="razio-code">
+      <text>{{code.slot}}</text>
+    </view>
+  </view>
+  <view class="demo">
+    <view class="demo-header">使用 disabled</view>
+    <view class="demo-content">
+      <r-radio disabled value="disabled">disabled</r-radio>
+    </view>
+    <view class="razio-code">
+      <text>{{code.disabled}}</text>
+    </view>
+  </view>
+  <view class="demo">
+    <view class="demo-header">使用 reverse</view>
+    <view class="demo-content">
+      <r-radio reverse value="reverse">reverse</r-radio>
+    </view>
+    <view class="razio-code">
+      <text>{{code.reverse}}</text>
+    </view>
+  </view>
+  <view class="demo">
+    <view class="demo-header">使用radio-group</view>
+    <view class="demo-content">
+      <view>目前选中： {{value}}</view>
+      <r-radio-group bind:change="radioChange" value="{{value}}">
+        <r-radio label="flex-start" value="flex-start"></r-radio>
+        <r-radio label="center" value="center"></r-radio>
+        <r-radio label="flex-end" value="flex-end"></r-radio>
+        <r-radio label="stretch" value="stretch"></r-radio>
+        <r-radio label="baseline" value="baseline"></r-radio>
+      </r-radio-group>
+    </view>
+    <view class="razio-code">
+      <text>{{code.group}}</text>
+    </view>
+  </view>
+</view>

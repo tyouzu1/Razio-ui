@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Cell",
+  "usingComponents": {
+    "r-cell": "/assets/lib/razio-ui/dist/components/cell/index",
+    "r-cell-group": "/assets/lib/razio-ui/dist/components/cellGroup/index"
+  }
+}
